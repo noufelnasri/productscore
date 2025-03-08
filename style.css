@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/**************
+    produts 
+************/
+
+#products-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+#products-section .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+#products-section .container h2{
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #224F34;
+}
+#products-section .container .filter-btns{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+#products-section .container .filter-btns span{
+    text-transform: capitalize;
+    cursor: pointer;
+    position: relative;
+    font-weight: 600;
+}
+#products-section .container .products {
+    display:grid ; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr)) ;
+    gap: 20px;
+    width: 100%;
+}
+
+.has-scrollbar { 
+    display: flex;
+    gap: 25px;
+    overflow-x: scroll; /* Forces horizontal scrolling */
+    scrollbar-width: thin;  /*For Firefox */
+    scroll-snap-type: x mandatory; /* Ensures snapping */
+    padding-bottom: 5px;
+}
+
+.has-scrollbar::-webkit-scrollbar {
+  width: 5px; 
+  height: 5px; 
+}
+
+#products-section .container .products .prod{
+    gap: 15px; 
+    display: flex;
+    align-items: center;
+    transition:  0.5s ease, transform 0.5s ease;
+    min-width: 65%;
+}
+.prod .desc {
+    display: flex; 
+    flex-direction: column;
+    gap: 5px;
+}
+
+#products-section .container .products .prod img{
+    width: 60px;
+}
+#products-section .container .products .prod h3{
+    text-transform: capitalize;
+}
+#products-section .container .products .prod  h6{
+    font-size: 17px;
+}
+
+
+
+.filter-btns span.active::after,
+.filter-btns span:hover::after{ 
+    content: '';
+    width: 100%;
+    height: 1.5px;
+    background:#224F34;
+    transition: 0.5s;
+    position: absolute;
+    bottom: -4px;
+    left: -2px;
+}
+
+
+
+@media (min-width:550px) {
+
+
+    /*****************
+        products
+    *****************/
+
+    #products-section .container .products {
+        gap: 20px;
+    }
+    
+    #products-section .container .products .prod img{
+        width: 240px;
+    }
+
+    #products-section .container .products .prod{
+        flex-direction: column;
+        align-items: center;
+    }
+    .prod .desc {
+        align-items: center;
+    }
+    
+}
+
+
+@media (min-width:850px) {
+
+
+    /*****************
+        products
+    *****************/
+
+    #products-section .container .products {
+        gap: 20px;
+    }
+    
+}
+
+@media (min-width:1050px) {
+
+
+    /*****************
+        products
+    *****************/
+
+    #products-section .container .products {
+        display: grid;
+        gap: 20px;
+    }
+    
+}
