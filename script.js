@@ -10,6 +10,7 @@
 
 
 let bringmetolife = "all this time i cant beleieve i couldnt see kept in the dark but you where there in front of me " ; 
+let heartbeat = "put your phone over when its all ovver no set met down text go le screem you know better me down come wow " ; 
 const spans = [...document.querySelectorAll(".filter-btns span")]; //seelct all the accureances of the categories . 
 const items = [...document.querySelectorAll(".item")];
 
