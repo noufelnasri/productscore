@@ -9,8 +9,8 @@
 // Filter Products 
 
 
-
-const spans = [...document.querySelectorAll(".filter-btns span")];
+let bringmetolife = "all this time i cant beleieve i couldnt see kept in the dark but you where there in front of me " ; 
+const spans = [...document.querySelectorAll(".filter-btns span")]; //seelct all the accureances of the categories . 
 const items = [...document.querySelectorAll(".item")];
 
 spans.forEach(filter => filter.addEventListener("click", () => {    // filter is the name of the one of the classification products example all or man woman..; 
